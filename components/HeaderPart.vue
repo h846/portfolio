@@ -1,16 +1,18 @@
+<script setup lang="ts">
+	import img_src from "@/assets/sauna_bg.jpg";
+</script>
+
 <template>
 	<div>
 		<div class="q-pa-md q-gutter-md">
 			<div class="row justify-between">
-				<q-parallax src="../assets/sauna_bg.jpg">
+				<q-parallax :src="img_src">
 					<h1 class="text-white">Hideki Yashiro</h1>
 				</q-parallax>
 			</div>
 		</div>
 	</div>
 </template>
-
-<script setup lang="ts"></script>
 
 <style lang="scss">
 	@import url("https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap");
