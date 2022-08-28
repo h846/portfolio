@@ -7,7 +7,7 @@
 		RPA: number;
 	}
 	const skills: skillObj = reactive({
-		htmlcss: 1,
+		htmlcss: 0,
 		JavaScript: 0.9,
 		NodeJs: 0.7,
 		Python: 0.6,
@@ -15,7 +15,7 @@
 	});
 
 	onMounted(() => {
-		console.log(skills.JavaScript);
+		skills.htmlcss = 1;
 	});
 </script>
 
