@@ -55,7 +55,7 @@
 	.profile-wrapper {
 		font-family: "Roboto";
 		width: 100%;
-		height: 500px;
+		height: 300px;
 		> div {
 			text-align: center;
 			max-width: 600px;

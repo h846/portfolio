@@ -2,7 +2,8 @@
 
 <template>
 	<div>
-		<bodypartSkill />
+		<bodypart-skill />
+		<bodypart-work />
 	</div>
 </template>
 

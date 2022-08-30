@@ -6,7 +6,6 @@
 	<div class="wrapper">
 		<div>
 			<div class="title">Hideki Yashiro</div>
-			<div class="subtitle">aaaaa</div>
 		</div>
 	</div>
 </template>
