@@ -9,7 +9,7 @@
 			desc: `現在有効のキャンペーンや過去のキャンペーンを検索、表示、管理できるツール。
 			OracleDBと連携したCRUD機能を有しています。検索時間の短縮、ユーザー目線に合わせたUI/UXの改善により
 			大幅な業務効率の改善に貢献しました。`,
-			imgsrc: ["assets/img/campaign/1.png"],
+			imgsrc: ["~/assets/img/campaign/1.png"],
 		},
 	});
 </script>

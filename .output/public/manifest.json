@@ -4,7 +4,7 @@
     "src": "assets/sauna_bg.png"
   },
   "node_modules/nuxt/dist/app/entry.mjs": {
-    "file": "_nuxt/entry.b8cb01a9.mjs",
+    "file": "_nuxt/entry.03aef12b.mjs",
     "src": "node_modules/nuxt/dist/app/entry.mjs",
     "isEntry": true,
     "dynamicImports": [
@@ -19,7 +19,7 @@
     ]
   },
   "virtual:nuxt:C:/dev/portfolio/.nuxt/error-component.mjs": {
-    "file": "_nuxt/error-component.6a831d83.mjs",
+    "file": "_nuxt/error-component.cb43e396.mjs",
     "src": "virtual:nuxt:C:/dev/portfolio/.nuxt/error-component.mjs",
     "isDynamicEntry": true,
     "imports": [
@@ -31,7 +31,7 @@
     ]
   },
   "pages/index.vue": {
-    "file": "_nuxt/index.02fb4e27.mjs",
+    "file": "_nuxt/index.82045989.mjs",
     "src": "pages/index.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -39,7 +39,7 @@
     ]
   },
   "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue": {
-    "file": "_nuxt/error-404.4ba795d2.mjs",
+    "file": "_nuxt/error-404.ea6d7aa0.mjs",
     "src": "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -50,7 +50,7 @@
     ]
   },
   "node_modules/@nuxt/ui-templates/dist/templates/error-500.vue": {
-    "file": "_nuxt/error-500.937425f6.mjs",
+    "file": "_nuxt/error-500.a2320669.mjs",
     "src": "node_modules/@nuxt/ui-templates/dist/templates/error-500.vue",
     "isDynamicEntry": true,
     "imports": [
