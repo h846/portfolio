@@ -89,7 +89,6 @@
 				<div class="inq-head">メールアドレス</div>
 				<q-input
 					name="useremail"
-					type="email"
 					outlined
 					dense
 					hide-bottom-space
