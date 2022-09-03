@@ -31,7 +31,7 @@
 <template>
 	<div class="q-pa-md q-mt-lg" style="width: 100%; height: 600px">
 		<div class="title">CONTACT</div>
-		<q-form
+		<form
 			name="contact"
 			@submit.prevent="onSubmit"
 			@reset="onReset"
@@ -105,7 +105,7 @@
 					class="q-ml-sm"
 				/>
 			</div>
-		</q-form>
+		</form>
 	</div>
 </template>
 
