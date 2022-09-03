@@ -4,6 +4,7 @@
 	<div>
 		<bodypart-skill />
 		<bodypart-work />
+		<bodypart-inquiry />
 	</div>
 </template>
 
