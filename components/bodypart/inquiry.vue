@@ -17,7 +17,13 @@
 		if (botfield) {
 			params.append("bot-field", String(botfield.value));
 		}
-		await useFetch("/", { method: "POST", body: params });
+		await useFetch("/", { method: "POST", body: params })
+			.then((data) => {
+				console.log(data, "DONE!");
+			})
+			.catch((e) => {
+				console.log(e);
+			});
 	};
 
 	const onReset = () => {
