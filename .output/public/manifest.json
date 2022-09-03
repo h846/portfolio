@@ -4,7 +4,7 @@
     "src": "assets/sauna_bg.png"
   },
   "node_modules/nuxt/dist/app/entry.mjs": {
-    "file": "_nuxt/entry.9dedb28e.mjs",
+    "file": "_nuxt/entry.2f22884b.mjs",
     "src": "node_modules/nuxt/dist/app/entry.mjs",
     "isEntry": true,
     "dynamicImports": [
@@ -12,14 +12,14 @@
       "virtual:nuxt:/Users/yassi/Library/Mobile Documents/com~apple~CloudDocs/dev/portfolio/.nuxt/error-component.mjs"
     ],
     "css": [
-      "_nuxt/entry.ffa771c0.css"
+      "_nuxt/entry.08ba8802.css"
     ],
     "assets": [
       "_nuxt/sauna_bg.53dc8ba1.png"
     ]
   },
   "virtual:nuxt:/Users/yassi/Library/Mobile Documents/com~apple~CloudDocs/dev/portfolio/.nuxt/error-component.mjs": {
-    "file": "_nuxt/error-component.34a52571.mjs",
+    "file": "_nuxt/error-component.9bbe8c90.mjs",
     "src": "virtual:nuxt:/Users/yassi/Library/Mobile Documents/com~apple~CloudDocs/dev/portfolio/.nuxt/error-component.mjs",
     "isDynamicEntry": true,
     "imports": [
@@ -31,7 +31,7 @@
     ]
   },
   "pages/index.vue": {
-    "file": "_nuxt/index.ed041157.mjs",
+    "file": "_nuxt/index.d9ffbd11.mjs",
     "src": "pages/index.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -39,7 +39,7 @@
     ]
   },
   "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue": {
-    "file": "_nuxt/error-404.8d74f2a9.mjs",
+    "file": "_nuxt/error-404.c5129faa.mjs",
     "src": "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -50,7 +50,7 @@
     ]
   },
   "node_modules/@nuxt/ui-templates/dist/templates/error-500.vue": {
-    "file": "_nuxt/error-500.bdfe1ff6.mjs",
+    "file": "_nuxt/error-500.e1d7de47.mjs",
     "src": "node_modules/@nuxt/ui-templates/dist/templates/error-500.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -69,7 +69,7 @@
     "src": "node_modules/@nuxt/ui-templates/dist/templates/error-500.css"
   },
   "node_modules/nuxt/dist/app/entry.css": {
-    "file": "_nuxt/entry.ffa771c0.css",
+    "file": "_nuxt/entry.08ba8802.css",
     "src": "node_modules/nuxt/dist/app/entry.css"
   }
 }

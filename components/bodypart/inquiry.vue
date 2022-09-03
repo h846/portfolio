@@ -18,7 +18,11 @@
 		if (botfield) {
 			params.append("bot-field", String(botfield.value));
 		}
-		await useFetch("/", { method: "POST", body: params })
+		await useFetch("/", {
+			method: "POST",
+			headers: { "Content-Type": "application/x-www-form-urlencoded" },
+			body: params,
+		})
 			.then(({ data }) => {
 				console.log(data, "DONE!");
 			})
