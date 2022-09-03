@@ -62,15 +62,34 @@
 			width: 80%;
 			margin: 0 auto;
 			.title {
-				text-align: center;
-				line-height: 20px;
-				width: 90px;
+				position: relative;
+				margin: 0 auto;
+				margin-bottom: 20px;
+				width: 145px;
 				font-size: 2rem;
 				font-weight: bold;
-				margin: 0 auto;
-				padding: 0.5rem 0rem;
-				margin-bottom: 0.2rem;
-				border-bottom: 6px solid #f6ba33;
+				&:after {
+					position: absolute;
+					bottom: -5px;
+					left: 2px;
+					width: 145px;
+					height: 6px;
+					content: "";
+					border-radius: 3px;
+					background-image: -webkit-gradient(
+						linear,
+						right top,
+						left top,
+						from(#2af598),
+						to(#009efd)
+					);
+					background-image: -webkit-linear-gradient(
+						right,
+						#2af598 0%,
+						#009efd 100%
+					);
+					background-image: linear-gradient(to left, #2af598 0%, #009efd 100%);
+				}
 			}
 		}
 	}

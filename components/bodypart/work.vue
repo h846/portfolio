@@ -54,7 +54,7 @@
 							</div>
 							<div class="col-7">
 								<div class="row">
-									<div class="col" v-for="img in i.imgsrc">
+									<div class="col" v-for="(img, idx) in i.imgsrc" :key="idx">
 										<q-img :src="img" style="height: 100px" />
 									</div>
 								</div>
