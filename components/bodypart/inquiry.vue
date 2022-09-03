@@ -7,6 +7,7 @@
 	const botfield = ref(false);
 
 	const onSubmit = async () => {
+		console.log("SUBMIT START");
 		const params = new URLSearchParams();
 		params.append("form-name", "contact");
 		params.append("username", kanjiName);
@@ -18,7 +19,7 @@
 			params.append("bot-field", String(botfield.value));
 		}
 		await useFetch("/", { method: "POST", body: params })
-			.then((data) => {
+			.then(({ data }) => {
 				console.log(data, "DONE!");
 			})
 			.catch((e) => {
