@@ -19,7 +19,7 @@
 			params.append("bot-field", String(botfield.value));
 		}
 		console.log(params);
-		await useFetch("/", {
+		await useFetch("/dummyForm", {
 			method: "POST",
 			headers: { "Content-Type": "application/x-www-form-urlencoded" },
 			body: String(params),
