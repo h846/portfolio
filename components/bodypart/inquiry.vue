@@ -32,13 +32,13 @@
 	<div class="q-pa-md q-mt-lg" style="width: 100%; height: 600px">
 		<div class="title">CONTACT</div>
 		<form
+			data-netlify="true"
 			name="contact"
 			@submit.prevent="onSubmit"
 			@reset="onReset"
 			class="q-gutter-md my-form"
 			method="POST"
 			data-netlify-honeypot="bot-field"
-			netlify
 		>
 			<!-- BOT対策用 -->
 			<div v-show="false">
