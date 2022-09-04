@@ -2,6 +2,7 @@
 	interface skillObj {
 		htmlcss: { title: string; val: number };
 		JavaScript: { title: string; val: number };
+		NuxtJS: { title: string; val: number };
 		NodeJS: { title: string; val: number };
 		Python: { title: string; val: number };
 		RPA: { title: string; val: number };
@@ -9,6 +10,7 @@
 	const skills: skillObj = reactive({
 		htmlcss: { title: "HTML5/CSS3", val: 0 },
 		JavaScript: { title: "JavaScript", val: 0 },
+		NuxtJS: { title: "Nuxt.js", val: 0 },
 		NodeJS: { title: "Node.js", val: 0 },
 		Python: { title: "Python", val: 0 },
 		RPA: { title: "RPA", val: 0 },
@@ -17,6 +19,7 @@
 	onMounted(() => {
 		skills.htmlcss.val = 1;
 		skills.JavaScript.val = 0.9;
+		skills.NuxtJS.val = 0.8;
 		skills.NodeJS.val = 0.7;
 		skills.Python.val = 0.5;
 		skills.RPA.val = 0.8;
@@ -70,9 +73,9 @@
 				font-weight: bold;
 				&:after {
 					position: absolute;
-					bottom: -5px;
-					left: 2px;
-					width: 145px;
+					bottom: 0;
+					left: 30px;
+					width: 85px;
 					height: 6px;
 					content: "";
 					border-radius: 3px;
