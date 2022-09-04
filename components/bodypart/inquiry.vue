@@ -6,26 +6,34 @@
 	const inquiry = ref(null);
 	const botfield = ref(false);
 
+	const encode = (data) => {
+		return Object.keys(data)
+			.map(
+				(key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+			)
+			.join("&");
+	};
+
 	const onSubmit = async () => {
-		console.log("SUBMIT START");
-		const params = new URLSearchParams();
-		params.append("form-name", "contact");
-		params.append("username", kanjiName);
-		params.append("katakana", furiganaName);
-		params.append("gender", String(gender));
-		params.append("useremail", email);
-		params.append("message", inquiry);
+		const dataset = {
+			"form-name": "contact",
+			username: kanjiName.value,
+			katakana: furiganaName.value,
+			gender: String(gender.value),
+			useremail: email.value,
+			message: inquiry.value,
+		};
 		if (botfield) {
-			params.append("bot-field", String(botfield.value));
+			dataset["bot-field"] = botfield.value;
 		}
-		console.log(params);
+		console.log(encode(dataset));
 		await useFetch("/dummyForm", {
 			method: "POST",
 			headers: { "Content-Type": "application/x-www-form-urlencoded" },
-			body: String(params),
+			body: encode(dataset),
 		})
 			.then(({ data }) => {
-				console.log(data, "DONE!");
+				console.log("DONE!");
 			})
 			.catch((e) => {
 				console.log(e);
