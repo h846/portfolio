@@ -5,6 +5,7 @@
 	const gender = ref("男");
 	const inquiry = ref(null);
 	const botfield = ref(false);
+	const myAlert = ref(false);
 
 	const encode = (data) => {
 		return Object.keys(data)
@@ -33,6 +34,7 @@
 			body: encode(dataset),
 		})
 			.then(({ data }) => {
+				myAlert.value = true;
 				console.log("DONE!");
 			})
 			.catch((e) => {
@@ -92,8 +94,8 @@
 				<div class="col-3 q-mx-sm">
 					<div class="inq-head q-mx-sm">性別</div>
 					<div class="q-gutter-sm">
-						<q-radio name="gender" v-model="gender" val="男" label="男" />
-						<q-radio name="gender" v-model="gender" val="女" label="女" />
+						<q-radio name="gender" v-model="gender" val="male" label="男" />
+						<q-radio name="gender" v-model="gender" val="femail" label="女" />
 					</div>
 				</div>
 			</div>
@@ -125,6 +127,14 @@
 				/>
 			</div>
 		</form>
+
+		<q-dialog v-model="myAlert" auto-close>
+			<q-card>
+				<q-card-section>
+					<div class="text-h6">送信完了しました！</div>
+				</q-card-section>
+			</q-card>
+		</q-dialog>
 	</div>
 </template>
 
