@@ -28,7 +28,7 @@
 			dataset["bot-field"] = botfield.value;
 		}
 		console.log(encode(dataset));
-		await useFetch("/dummyForm", {
+		await useFetch("/", {
 			method: "POST",
 			headers: { "Content-Type": "application/x-www-form-urlencoded" },
 			params: dataset, //encode(dataset),
