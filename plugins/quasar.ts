@@ -9,7 +9,6 @@ export default defineNuxtPlugin((nuxtApp) => {
         components,
         directives,
         plugins: {},
-        // ここは Quasar 側の lang 設定なので好みです。
-        lang: langJa
+        lang: langJa,
     })
 });

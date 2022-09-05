@@ -23,7 +23,9 @@
 		},
 	});
 
-	const slide = ref(1);
+	onMounted(() => {});
+
+	const model = ref(0);
 </script>
 
 <template>
@@ -48,7 +50,7 @@
 				>
 					<q-card
 						class="q-pa-lg"
-						style="width: 100%; min-width: 700px; height: 100%"
+						style="width: 100%; min-width: 700px; height: 550px"
 					>
 						<q-card-section class="q-pt-none" style="height: 100%">
 							<div
@@ -61,20 +63,16 @@
 								</div>
 								<div class="col-6 q-mx-sm">
 									<q-card>
-										<q-carousel
-											animated
-											v-model="slide"
-											arrows
-											navigation
-											infinite
-										>
-											<q-carousel-slide
-												v-for="(img, idx) in i.imgsrc"
+										<v-carousel v-model="model">
+											<v-carousel-item
+												v-for="(image, idx) in i.imgsrc"
 												:key="idx"
-												:name="idx"
-												:img-src="img"
-											/>
-										</q-carousel>
+											>
+												<v-sheet height="100%" tile>
+													<v-img :src="image"></v-img>
+												</v-sheet>
+											</v-carousel-item>
+										</v-carousel>
 									</q-card>
 								</div>
 							</div>
