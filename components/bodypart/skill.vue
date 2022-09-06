@@ -33,10 +33,11 @@
 			<div class="row">
 				<div class="col-6 q-pa-sm" v-for="(i, k, idx) in skills" :key="idx">
 					{{ i.title }}
+
 					<q-linear-progress
 						stripe
 						size="25px"
-						color="warning"
+						color="green"
 						rounded
 						:value="i.val"
 					>

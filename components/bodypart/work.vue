@@ -6,6 +6,12 @@
 			imgsrc: Array<string>;
 			dialog: boolean;
 		};
+		fintech: {
+			title: string;
+			desc: string;
+			imgsrc: Array<string>;
+			dialog: boolean;
+		};
 	}
 
 	const workData: works = reactive({
@@ -14,6 +20,20 @@
 			desc: `現在有効のキャンペーンや過去のキャンペーンを検索、表示、管理できるツール。
 			OracleDBと連携したCRUD機能を有しています。検索時間の短縮、ユーザー目線に合わせたUI/UXの改善により
 			大幅な業務効率の改善に貢献しました。`,
+			imgsrc: [
+				"/img/campaign/1.png",
+				"/img/campaign/2.png",
+				"/img/campaign/3.png",
+			],
+			dialog: false,
+		},
+		fintech: {
+			title: "某フィンテック企業LP",
+			desc: `
+			某フィンテック企業からの依頼で作成したLPです。
+			訴求したい情報を的確に伝えることができるようデザインしました。
+			アニメーションによって動きを付けて飽きさせないデザインにしています。
+			`,
 			imgsrc: [
 				"/img/campaign/1.png",
 				"/img/campaign/2.png",
@@ -85,47 +105,66 @@
 </template>
 
 <style lang="stylus" scoped>
-	.work-card{
-	  height:300px;
-	  min-width 300px;
-		cursor:pointer;
-	}
+		.work-card{
+		  height:300px;
+		  min-width 300px;
+			cursor:pointer;
+		}
 
-	.title {
-		position: relative;
-		margin: 30px auto;
-		width: 145px;
-		font-size: 2rem;
-		font-weight: bold;
-			&:after {
-					position: absolute;
-					bottom: -5px;
-					left: 2px;
-					width: 110px;
-					height: 6px;
-					content: '';
-					border-radius: 3px;
-					background-image: -webkit-gradient(linear, right top, left top, from(#2af598), to(#009efd));
-					background-image: -webkit-linear-gradient(right, #2af598 0%, #009efd 100%);
-					background-image: linear-gradient(to left, #2af598 0%, #009efd 100%);
+		.title {
+			position: relative;
+			margin: 30px auto;
+			width: 145px;
+			font-size: 2rem;
+			font-weight: bold;
+				&:after {
+						position: absolute;
+						bottom: -5px;
+						left: 2px;
+						width: 110px;
+						height: 6px;
+						content: '';
+						border-radius: 3px;
+						background-image: -webkit-gradient(linear, right top, left top, from(#2af598), to(#009efd));
+						background-image: -webkit-linear-gradient(right, #2af598 0%, #009efd 100%);
+						background-image: linear-gradient(to left, #2af598 0%, #009efd 100%);
+					}
 				}
-			}
+	.work-title{
+					text-align: center;
+					font-size: 1rem;
+					font-weight:bold;
+					margin-bottom: 20px;
+				}
+				.card-title{
+					position:relative;
+					display:inline-block;
+					padding: 0 20px;
+					margin-bottom:10px;
+					text-align: center;
+					font-size: 15px;
+					font-weight: bold;
+					&:before, &:after{
+						content: '';
+						position: absolute;
+						top: 50%;
+						display: inline-block;
+						width: 15px;
+						height: 3px;
+						border-top: solid 1px black;
+						border-bottom: solid 1px black;
+					}
+					&:before{
+						left:0;
+					}
+					&:after{
+						right:0;
+					}
+				}
 
-			.work-title{
-				margin-top:10px;
-				text-align: center;
-				font-size: 16px;
-				font-weight: bold;
-			}
 
-			.card-title{
-				text-align: center;
-				font-size: 1rem;
-				font-weight:bold;
-				margin-bottom: 20px;
-			}
 
-			.card-desc {
-				line-height: 25px;
-			}
+				.card-desc {
+					line-height: 25px;
+				}
 </style>
