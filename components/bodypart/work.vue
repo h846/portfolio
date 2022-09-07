@@ -18,7 +18,7 @@
 		camptool: {
 			title: "キャンペーン検索ツール",
 			desc: `現在有効のキャンペーンや過去のキャンペーンを検索、表示、管理できるツール。
-			OracleDBと連携したCRUD機能を有しています。検索時間の短縮、ユーザー目線に合わせたUI/UXの改善により
+			OracleDBと連携したCRUD機能を有しています。<br/>検索時間の短縮、ユーザー目線に合わせたUI/UXの改善により
 			大幅な業務効率の改善に貢献しました。`,
 			imgsrc: [
 				"/img/campaign/1.png",
@@ -33,12 +33,9 @@
 			某フィンテック企業からの依頼で作成したLPです。
 			訴求したい情報を的確に伝えることができるようデザインしました。
 			アニメーションによって動きを付けて飽きさせないデザインにしています。
+			URL: <a href="https://unrivaled-rabanadas-5b0a00.netlify.app/">Social Rending</a>
 			`,
-			imgsrc: [
-				"/img/campaign/1.png",
-				"/img/campaign/2.png",
-				"/img/campaign/3.png",
-			],
+			imgsrc: ["/img/lp/1.png", "/img/lp/2.png", "/img/lp/3.png"],
 			dialog: false,
 		},
 	});
@@ -54,9 +51,9 @@
 		<div class="row justify-center items-center">
 			<div class="col-4" v-for="(i, k, idx) in workData" :key="idx">
 				<!-- Card Part-->
-				<q-card class="work-card" @click="i.dialog = true">
+				<q-card class="work-card" @click="i.dialog = true" style="width: 170px">
 					<q-card-section>
-						<q-img :src="i.imgsrc[0]" />
+						<q-img :src="i.imgsrc[0]" style="height: 250px" />
 					</q-card-section>
 					<q-card-section class="q-pt-none">
 						<div class="work-title">{{ i.title }}</div>
@@ -79,7 +76,7 @@
 							>
 								<div class="col-4 q-mx-sm">
 									<div class="card-title">{{ i.title }}</div>
-									<div class="card-desc">{{ i.desc }}</div>
+									<div class="card-desc" v-html="i.desc"></div>
 								</div>
 								<div class="col-6 q-mx-sm">
 									<q-card>
@@ -106,7 +103,7 @@
 
 <style lang="stylus" scoped>
 		.work-card{
-		  height:300px;
+		  height:350px;
 		  min-width 300px;
 			cursor:pointer;
 		}

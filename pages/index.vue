@@ -14,7 +14,7 @@
 				</q-tabs>
 			</q-toolbar>
 		</q-header>
-		<ProfilePart />
+		<!-- <ProfilePart /> -->
 		<bodypart />
 	</q-layout>
 </template>

@@ -36,6 +36,7 @@
 			.then(({ data }) => {
 				myAlert.value = true;
 				console.log("DONE!");
+				onReset();
 			})
 			.catch((e) => {
 				console.log(e);
