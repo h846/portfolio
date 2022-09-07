@@ -5,4 +5,7 @@
 </template>
 <style lang="stylus">
 	@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,900&display=swap');
+	html,body{
+		background: url('/img/bg.jpg') center center / cover no-repeat fixed;
+	}
 </style>

@@ -53,82 +53,83 @@
 </script>
 <template>
 	<div class="q-pa-md q-mt-lg" style="width: 100%; height: 600px">
-		<div class="title">CONTACT</div>
-		<form
-			data-netlify="true"
-			name="contact"
-			@submit.prevent="onSubmit"
-			@reset="onReset"
-			class="q-gutter-md my-form"
-			method="POST"
-			data-netlify-honeypot="bot-field"
-		>
-			<!-- BOT対策用 -->
-			<div v-show="false">
-				<label for="message">スパムでない場合は空欄</label>
-				<input type="text" name="bot-field" v-model="botfield" />
-			</div>
-			<!-- For Netlify Form -->
-			<input type="hidden" name="form-name" value="contact" />
-			<!-- Main Inputs -->
-			<div class="row">
-				<div class="col-4 q-mx-sm">
-					<div class="inq-head">お名前</div>
-					<q-input
-						name="username"
-						outlined
-						dense
-						hide-bottom-space
-						v-model="kanjiName"
-					/>
+		<v-card class="py-5">
+			<div class="title">CONTACT</div>
+			<form
+				data-netlify="true"
+				name="contact"
+				@submit.prevent="onSubmit"
+				@reset="onReset"
+				class="q-gutter-md my-form"
+				method="POST"
+				data-netlify-honeypot="bot-field"
+			>
+				<!-- BOT対策用 -->
+				<div v-show="false">
+					<label for="message">スパムでない場合は空欄</label>
+					<input type="text" name="bot-field" v-model="botfield" />
 				</div>
-				<div class="col-4 q-mx-sm">
-					<div class="inq-head">フリガナ</div>
-					<q-input
-						name="katakana"
-						outlined
-						dense
-						hide-bottom-space
-						v-model="furiganaName"
-					/>
-				</div>
-				<div class="col-3 q-mx-sm">
-					<div class="inq-head q-mx-sm">性別</div>
-					<div class="q-gutter-sm">
-						<q-radio name="gender" v-model="gender" val="male" label="男" />
-						<q-radio name="gender" v-model="gender" val="femail" label="女" />
+				<!-- For Netlify Form -->
+				<input type="hidden" name="form-name" value="contact" />
+				<!-- Main Inputs -->
+				<div class="row">
+					<div class="col-4 q-mx-sm">
+						<div class="inq-head">お名前</div>
+						<q-input
+							name="username"
+							outlined
+							dense
+							hide-bottom-space
+							v-model="kanjiName"
+						/>
+					</div>
+					<div class="col-4 q-mx-sm">
+						<div class="inq-head">フリガナ</div>
+						<q-input
+							name="katakana"
+							outlined
+							dense
+							hide-bottom-space
+							v-model="furiganaName"
+						/>
+					</div>
+					<div class="col-3 q-mx-sm">
+						<div class="inq-head q-mx-sm">性別</div>
+						<div class="q-gutter-sm">
+							<q-radio name="gender" v-model="gender" val="male" label="男" />
+							<q-radio name="gender" v-model="gender" val="femail" label="女" />
+						</div>
 					</div>
 				</div>
-			</div>
-			<!-- E-MAIL SECTION -->
-			<div class="q-px-sm">
-				<div class="inq-head">メールアドレス</div>
-				<q-input
-					name="useremail"
-					outlined
-					dense
-					hide-bottom-space
-					v-model="email"
-				/>
-			</div>
-			<!-- CONTACT SECTION -->
-			<div class="q-px-sm">
-				<div class="inq-head">お問い合わせ内容</div>
-				<q-input name="message" v-model="inquiry" outlined type="textarea" />
-			</div>
+				<!-- E-MAIL SECTION -->
+				<div class="q-px-sm">
+					<div class="inq-head">メールアドレス</div>
+					<q-input
+						name="useremail"
+						outlined
+						dense
+						hide-bottom-space
+						v-model="email"
+					/>
+				</div>
+				<!-- CONTACT SECTION -->
+				<div class="q-px-sm">
+					<div class="inq-head">お問い合わせ内容</div>
+					<q-input name="message" v-model="inquiry" outlined type="textarea" />
+				</div>
 
-			<div class="q-px-sm">
-				<q-btn label="送信" type="submit" color="primary" />
-				<q-btn
-					label="リセット"
-					type="reset"
-					color="primary"
-					flat
-					class="q-ml-sm"
-				/>
-			</div>
-		</form>
-
+				<div class="q-px-sm">
+					<q-btn label="送信" type="submit" color="primary" />
+					<q-btn
+						label="リセット"
+						type="reset"
+						color="primary"
+						flat
+						class="q-ml-sm"
+					/>
+				</div>
+			</form>
+		</v-card>
 		<q-dialog v-model="myAlert" auto-close>
 			<q-card>
 				<q-card-section>
@@ -154,7 +155,7 @@
 	.title {
 		position: relative;
 		margin: 0 auto;
-		width: 145px;
+		width: 150px;
 		font-size: 2rem;
 		font-weight: bold;
 			&:after {
