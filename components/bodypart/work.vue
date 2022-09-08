@@ -12,6 +12,12 @@
 			imgsrc: Array<string>;
 			dialog: boolean;
 		};
+		sample: {
+			title: string;
+			desc: string;
+			imgsrc: Array<string>;
+			dialog: boolean;
+		};
 	}
 
 	const workData: works = reactive({
@@ -38,8 +44,18 @@
 			imgsrc: ["/img/lp/1.png", "/img/lp/2.png", "/img/lp/3.png"],
 			dialog: false,
 		},
+		sample: {
+			title: "サンプル商品検索ツール",
+			desc: `
+			社内にある全商品情報を検索・編集・作成・削除をすることができます。
+			また選択した商品のラベルを印刷する機能を有しており、このツールから社内の商品を一括管理できるようになっています。
+			`,
+			imgsrc: ["/img/sample/1.png", "/img/sample/2.png", "/img/sample/3.png"],
+			dialog: false,
+		},
 	});
 
+	const zoomImg = false;
 	onMounted(() => {});
 
 	const model = ref(0);
@@ -48,10 +64,13 @@
 <template>
 	<div>
 		<div class="title">WORKS</div>
-		<div class="row justify-center items-center">
+		<div
+			class="row justify-center items-center"
+			style="max-width: 1000px; margin: 0 auto"
+		>
 			<div class="col-4" v-for="(i, k, idx) in workData" :key="idx">
 				<!-- Card Part-->
-				<q-card class="work-card" @click="i.dialog = true" style="width: 170px">
+				<q-card class="work-card" @click="i.dialog = true">
 					<q-card-section>
 						<q-img :src="i.imgsrc[0]" style="height: 250px" />
 					</q-card-section>
@@ -84,6 +103,7 @@
 											<v-carousel-item
 												v-for="(image, idx) in i.imgsrc"
 												:key="idx"
+												@click.stop=""
 											>
 												<v-sheet height="100%" tile>
 													<v-img :src="image"></v-img>
@@ -103,8 +123,9 @@
 
 <style lang="stylus" scoped>
 		.work-card{
-		  height:350px;
-		  min-width 300px;
+		  height:auto;
+		  min-width: 280px;
+			max-width: 280px;
 			cursor:pointer;
 		}
 
