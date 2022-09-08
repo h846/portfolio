@@ -103,7 +103,6 @@
 											<v-carousel-item
 												v-for="(image, idx) in i.imgsrc"
 												:key="idx"
-												@click.stop=""
 											>
 												<v-sheet height="100%" tile>
 													<v-img :src="image"></v-img>
